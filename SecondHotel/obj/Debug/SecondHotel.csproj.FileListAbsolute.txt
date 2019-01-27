@@ -1,0 +1,7 @@
+C:\Users\dengd\source\repos\Company\SecondHotel\obj\Debug\SecondHotel.csproj.CoreCompileInputs.cache
+C:\Users\dengd\source\repos\Company\SecondHotel\obj\Debug\SecondHotel.csprojAssemblyReference.cache
+C:\Users\dengd\source\repos\Company\SecondHotel\bin\Debug\SecondHotel.exe.config
+C:\Users\dengd\source\repos\Company\SecondHotel\bin\Debug\SecondHotel.exe
+C:\Users\dengd\source\repos\Company\SecondHotel\bin\Debug\SecondHotel.pdb
+C:\Users\dengd\source\repos\Company\SecondHotel\obj\Debug\SecondHotel.exe
+C:\Users\dengd\source\repos\Company\SecondHotel\obj\Debug\SecondHotel.pdb

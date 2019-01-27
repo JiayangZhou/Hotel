@@ -1,0 +1,7 @@
+C:\Users\dengd\source\repos\Company\FristHotel\bin\Debug\FristHotel.exe.config
+C:\Users\dengd\source\repos\Company\FristHotel\bin\Debug\FristHotel.exe
+C:\Users\dengd\source\repos\Company\FristHotel\bin\Debug\FristHotel.pdb
+C:\Users\dengd\source\repos\Company\FristHotel\obj\Debug\FristHotel.csprojAssemblyReference.cache
+C:\Users\dengd\source\repos\Company\FristHotel\obj\Debug\FristHotel.csproj.CoreCompileInputs.cache
+C:\Users\dengd\source\repos\Company\FristHotel\obj\Debug\FristHotel.exe
+C:\Users\dengd\source\repos\Company\FristHotel\obj\Debug\FristHotel.pdb
