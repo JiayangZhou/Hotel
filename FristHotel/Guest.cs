@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FristHotel
 {
-    class Guest
+    public class Guest
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

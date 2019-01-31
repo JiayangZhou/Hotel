@@ -15,10 +15,12 @@ namespace FristHotel
 
             //WelcomeGuests();
             //NotHereGuests();
-            
 
 
-
+            //int[] ages = new int[] { 0,1,2,3,4};
+            //ages[0] = 1;
+            //ages[1] = 2;
+            //ages[2] = 3;
 
 
 

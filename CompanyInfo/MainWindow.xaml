@@ -4,9 +4,86 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CompanyInfo"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d" FontSize="18" Topmost="False" WindowState="Normal"
+        Title="CompanyInfo" Height="450" Width="800"> 
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
         
+        <TabControl x:Name="tabControl" Grid.Column="1" Grid.Row="4" MinHeight="200" MinWidth="300">
+            <TabItem Header="Draw">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Calendar">
+                <Grid Background="#FFE5E5E5">
+                    <Calendar Name="MyCalendar" HorizontalAlignment="Left" Background="AliceBlue" DisplayMode="Month" DisplayDateStart="3/1/2017" DisplayDateEnd="12/1/2018" SelectedDatesChanged="MyCalendar_SelectedDatesChanged" FirstDayOfWeek="Monday">
+                        <Calendar.SelectedDate>
+                            10/21/2019
+                        </Calendar.SelectedDate>
+                    </Calendar>
+                    <TextBox x:Name="tbDataSelected" TextWrapping="Wrap" Text="TextBox" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        
+        <TextBlock Text="Type the property you wanna check:" Grid.Column="1" Grid.Row="1" FontSize="20" FontWeight="SemiBold" Margin="0,0,10,0" Grid.ColumnSpan="3" />
+        <TextBox x:Name="propertyName" Grid.Column="1" Grid.Row="2"  />
+        <Button x:Name="okayButton" Content="Okay" Grid.Column="1" Grid.Row="3" Margin="40,0,40,0" Click="okayButton_Click" />
+        <ComboBox x:Name="properties" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\dengd\OneDrive\桌面\Sweden\Certification\Personal Info\me.png" Height="20" Width="20"/>
+                        <TextBlock Text="{Binding FullName}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        
+        <!--<Image Grid.Column="4" Grid.Row="2" Grid.RowSpan="4" Source="C:\Users\dengd\OneDrive\桌面\Sweden\Certification\Personal Info\me.png"/>-->
+        
+        <!--<MediaElement Grid.Column="4" Grid.Row="2" Grid.RowSpan="4"  Source="C:\Users\dengd\Videos\SampleVideo.mp4"/>-->
+        
+        <!--<WrapPanel Grid.Column="4" Grid.Row="2" Grid.RowSpan="4" Orientation="Vertical">
+            <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao3.jpg"/>
+            <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao4.jpg"/>
+            <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao5.jpg"/>
+        </WrapPanel>-->
+        
+        <!--<StackPanel Grid.Column="4" Grid.Row="2" Grid.RowSpan="4" Orientation="Vertical">
+            <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao3.jpg"/>
+            <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao4.jpg"/>
+            <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao5.jpg"/>
+        </StackPanel>-->
+
+        <ScrollViewer Grid.Column="4" Grid.Row="2" Grid.RowSpan="4" >
+            <StackPanel Orientation="Vertical">
+                <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao3.jpg"/>
+                <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao4.jpg"/>
+                <Image MaxHeight="200" MaxWidth="300" Source="C:\Life\Desktop background\Guidao5.jpg"/>
+            </StackPanel>
+        </ScrollViewer>
+
     </Grid>
 </Window>

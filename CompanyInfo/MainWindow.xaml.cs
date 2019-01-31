@@ -20,9 +20,46 @@ namespace CompanyInfo
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<People> people = new List<People>();
         public MainWindow()
         {
+            
             InitializeComponent();
+            CreatePeople();
+            properties.ItemsSource = people;
+
+        }
+
+        private void CreatePeople()
+        {
+
+            people.Add(new People { FirstName = "Tim", LastName = "Smith" });
+            people.Add(new People { FirstName = "Tom", LastName = "Johnson" });
+            people.Add(new People { FirstName = "David", LastName = "Williams" });
+
+        }
+
+        private void okayButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"{propertyName.Text} recieved");
+        }
+
+        private void MyCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var calendar = sender as Calendar;
+            if (calendar.SelectedDate.HasValue)
+            {
+                DateTime date = calendar.SelectedDate.Value;
+                try
+                {
+                    tbDataSelected.Text = date.ToShortDateString();
+
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+            }
         }
     }
 }
