@@ -12,11 +12,29 @@ namespace SecondHotel
         {
             Construction startBuilding = new Construction();
             startBuilding.Blueprint();
-
+            Employees employee = new Cooks();
 
         }
+
+
     }
 
-    
+    public abstract class Employees
+    {
+        public string Name { get; set; }
+
+        public abstract void AskWhenToRetire();
+
+    }
+    // it doesn't support multiple inheritance
+    public class Cooks:Employees
+    {
+        public string skills { get; set; }
+
+        public override void AskWhenToRetire()
+        {
+            
+        }
+    }
 
 }
